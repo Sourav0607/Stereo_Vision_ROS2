@@ -655,7 +655,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - Fine-tune calibration process
   - Implement depth-disparity validation
   - Add ground truth measurements for calibration
-- [ ] Implement YOLO object detection and human pose estimtion
+- [ ] Implement YOLO object detection and human pose estimation
 
 ---
 
