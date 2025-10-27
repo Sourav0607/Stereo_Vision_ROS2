@@ -347,16 +347,6 @@ Then normalize: `(X/W, Y/W, Z/W)` → final 3D point
 - **Z-axis**: Forward/depth (blue)
 - **Origin**: Left camera optical center
 
-### Point Cloud Export
-
-Point clouds are saved in PLY format (Polygon File Format):
-
-```bash
-# Files saved as: point_cloud_0000.ply, point_cloud_0001.ply, ...
-# View in external tools:
-meshlab point_cloud_0000.ply
-cloudcompare point_cloud_0000.ply
-```
 
 ## 🤖 ROS2 Integration
 
