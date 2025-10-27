@@ -7,7 +7,7 @@ A complete stereo vision system for 3D reconstruction and depth estimation using
 [![ROS2](https://img.shields.io/badge/ROS2-Humble+-orange.svg)](https://docs.ros.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-red.svg)](https://opencv.org/)
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -427,7 +427,7 @@ ros2 topic hz /stereo/points
 
 **Expected Rate**: ~30 Hz
 
-## 🔧 Technical Specifications
+##  Technical Specifications
 
 ### Camera Setup
 
