@@ -146,7 +146,6 @@ Stereo_Vision_ROS2/
 │   ├── stereo_calibrate.py           # Manual stereo calibration
 │   ├── stereo_calibration_auto_capture.py  # Auto-capture calibration
 │   ├── point_cloud_3d.py             # 3D point cloud visualization
-│   ├── depth_from_live_cameras.py    # Real-time depth mapping
 │   ├── depth_map_wsl.py              # Depth map with WLS filtering
 │   ├── depth_trial_without_wsl.py    # Basic depth map (no WLS)
 │   ├── rectification_test.py         # Rectification verification
