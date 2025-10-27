@@ -11,7 +11,6 @@ A complete stereo vision system for 3D reconstruction and depth estimation using
 
 - [Overview](#overview)
 - [Features](#features)
-- [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Quick Start Guide](#quick-start-guide)
@@ -69,7 +68,6 @@ This project implements a complete stereo vision pipeline for real-time 3D recon
 ### Hardware
 - **Cameras**: 2x USB webcams (tested with 640x480 resolution)
 - **Baseline**: ~115mm between camera centers (measured: **114.79mm**)
-- **CPU**: Multi-core processor recommended for real-time processing
 - **RAM**: 4GB minimum, 8GB recommended
 - **OS**: Ubuntu 20.04+ (tested on Ubuntu 22.04)
 
