@@ -11,6 +11,7 @@ A complete stereo vision system for 3D reconstruction and depth estimation using
 
 - [Overview](#overview)
 - [Features](#features)
+- [System Requirements] (#system-requirements)
 - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Quick Start Guide](#quick-start-guide)
