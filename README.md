@@ -72,6 +72,9 @@ This project implements a complete stereo vision pipeline for real-time 3D recon
 - **RAM**: 4GB minimum, 8GB recommended
 - **OS**: Ubuntu 20.04+ (tested on Ubuntu 22.04)
 
+![Stereo Camera Setup](images/camera_setup.jpg)
+*Our stereo camera rig: Two UGREEN USB webcams mounted with ~115mm baseline separation*
+
 ### Software
 - **Python**: 3.8 or higher
 - **ROS2**: Humble Hawksbill or later (optional, for ROS2 features)
