@@ -24,7 +24,7 @@ A complete stereo vision system for 3D reconstruction and depth estimation using
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🎯 Overview
+## Overview
 
 This project implements a complete stereo vision pipeline for real-time 3D reconstruction using two USB webcams. It includes camera calibration, stereo rectification, disparity mapping using Semi-Global Block Matching (SGBM), and 3D point cloud generation with RGB coloring.
 
@@ -36,33 +36,33 @@ This project implements a complete stereo vision pipeline for real-time 3D recon
 - **ROS2 Integration**: Publishes PointCloud2 messages for RViz visualization
 - **Interactive Depth Measurement**: Click-to-measure depth functionality
 
-## ✨ Features
+##  Features
 
 ### Calibration Tools
-- ✅ Automatic stereo calibration with checkerboard detection
-- ✅ Manual and auto-capture modes for calibration images
-- ✅ Reprojection error analysis (achieved: **0.57 pixels**)
-- ✅ YAML export of calibration parameters
+-  Automatic stereo calibration with checkerboard detection
+-  Manual and auto-capture modes for calibration images
+-  Reprojection error analysis (achieved: **0.57 pixels**)
+-  YAML export of calibration parameters
 
 ### Depth Estimation
-- ✅ **75% depth map coverage** with optimized parameters
-- ✅ SGBM (Semi-Global Block Matching) stereo matching
-- ✅ WLS (Weighted Least Squares) filtering for edge-aware smoothing
-- ✅ CLAHE (Contrast Limited Adaptive Histogram Equalization) preprocessing
-- ✅ Real-time disparity visualization with JET colormap
+-  **75% depth map coverage** with optimized parameters
+-  SGBM (Semi-Global Block Matching) stereo matching
+-  WLS (Weighted Least Squares) filtering for edge-aware smoothing
+-  CLAHE (Contrast Limited Adaptive Histogram Equalization) preprocessing
+-  Real-time disparity visualization with JET colormap
 
 ### 3D Visualization
-- ✅ Colored point cloud generation from stereo images
-- ✅ Open3D integration for interactive 3D viewing
-- ✅ PLY file export for external processing
-- ✅ Coordinate frame visualization
-- ✅ Mouse-click depth measurement
+-  Colored point cloud generation from stereo images
+-  Open3D integration for interactive 3D viewing
+-  PLY file export for external processing
+-  Coordinate frame visualization
+-  Mouse-click depth measurement
 
 ### ROS2 Integration
-- ✅ PointCloud2 publisher for RViz visualization
-- ✅ Rectified image and disparity map topics
-- ✅ Configurable camera parameters via ROS2 params
-- ✅ ~30 FPS real-time performance
+-  PointCloud2 publisher for RViz visualization
+-  Rectified image and disparity map topics
+-  Configurable camera parameters via ROS2 params
+-  ~30 FPS real-time performance
 
 ## 🖥️ System Requirements
 
@@ -79,7 +79,7 @@ This project implements a complete stereo vision pipeline for real-time 3D recon
 - **Open3D**: 0.13+ for 3D visualization
 - **NumPy**: 1.19+
 
-## 📦 Installation
+##  Installation
 
 ### 1. Install System Dependencies
 
@@ -134,7 +134,7 @@ cd Stereo_Vision_ROS2
 mkdir -p ~/stereo_calib_results
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Stereo_Vision_ROS2/
@@ -165,7 +165,7 @@ Stereo_Vision_ROS2/
     └── calibration_images/           # Calibration image captures
 ```
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### Step 1: Verify Camera Connections
 
@@ -184,14 +184,12 @@ python3 stereo_vision/verify_usbport_cameraR.py
 
 ### Step 2: Perform Stereo Calibration
 
-#### Option A: Auto Capture Mode (After every 3 seconds)
+####  Auto Capture Mode (After every 3 seconds)
 
 ```bash
 cd stereo_vision
 python3 stereo_calibrate_auto capture.py
 ```
-
-
 
 ####  Calibration of Camera
 
@@ -220,7 +218,7 @@ python3 stereo_vision/point_cloud_3d.py
 - **Scroll**: Zoom in/out
 - **R**: Reset view
 
-## 🎯 Stereo Calibration
+##  Stereo Calibration
 
 ### Checkerboard Specifications
 
@@ -233,10 +231,10 @@ Our calibration uses:
 
 | Metric | Value | Status |
 |--------|-------|--------|
-| Reprojection Error | 0.5737 pixels | ✅ Excellent |
-| Baseline Distance | 114.79 mm | ✅ Measured |
-| Focal Length | 1013.87 pixels | ✅ Calibrated |
-| Coverage | 75% | ✅ High |
+| Reprojection Error | 0.5737 pixels |  Excellent |
+| Baseline Distance | 114.79 mm |  Measured |
+| Focal Length | 1013.87 pixels | Calibrated |
+| Coverage | 75% |  High |
 
 **Reprojection Error Interpretation**:
 - < 0.5 pixels: Excellent
@@ -255,7 +253,7 @@ Our calibration uses:
 4. **Stability**: Keep cameras rigidly mounted during capture
 5. **Quantity**: Capture 20-30 image pairs for robust calibration
 
-## 📏 Depth Estimation
+##  Depth Estimation
 
 > ⚠️ **Note**: Depth estimation accuracy is currently under active improvement. While the system provides reasonable depth maps with 75% coverage, absolute depth measurements may have variations of ±5-10% in the working range. This is an ongoing task being refined through better calibration techniques and parameter optimization.
 
@@ -317,7 +315,7 @@ sigma_color = 1.5            # Edge sensitivity (lower = sharper edges)
 - Fills small holes in disparity map
 - Improves overall accuracy
 
-## 🌐 3D Point Cloud Visualization
+##  3D Point Cloud Visualization
 
 ### Point Cloud Generation Pipeline
 
@@ -340,15 +338,7 @@ The Q matrix transforms 2D disparity to 3D coordinates:
 
 Then normalize: `(X/W, Y/W, Z/W)` → final 3D point
 
-### Coordinate System
-
-- **X-axis**: Right (red)
-- **Y-axis**: Down (green)
-- **Z-axis**: Forward/depth (blue)
-- **Origin**: Left camera optical center
-
-
-## 🤖 ROS2 Integration
+##  ROS2 Integration
 
 ### Building the ROS2 Package
 
@@ -411,11 +401,12 @@ ros2 run cam_ros_node stereo_pointcloud_node --ros-args \
 rviz2
 
 # In RViz:
-# 1. Set Fixed Frame to: "left_camera_optical"
+# 1. Set Fixed Frame to: "base_link"
 # 2. Add → PointCloud2
 # 3. Set Topic to: /stereo/points
 # 4. Set Color Transformer to: RGB8
 # 5. Adjust point size as needed
+# 6. Invert Z-axis
 ```
 
 ### ROS2 Topic Information
@@ -477,7 +468,7 @@ ros2 topic hz /stereo/points
 - **3D Reprojection**: Q matrix transformation
 - **Coordinate Frame**: Left camera optical center
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Issue: Cameras Not Detected
 
@@ -578,7 +569,7 @@ cat cam_ros_node/setup.py
 4. **Enable WLS**: Significantly improves quality
 5. **Add Texture**: Point at objects with visible texture
 
-## 📚 Additional Resources
+##  Additional Resources
 
 ### Documentation
 - [OpenCV Stereo Calibration](https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html)
@@ -593,9 +584,9 @@ cat cam_ros_node/setup.py
 - **RViz**: ROS visualization tool
 - **rqt**: ROS2 GUI tools
 
-## 🤝 Contributing
+##  Contributing
 
-Contributions are welcome! Please follow these guidelines:
+Contributions are welcome! 
 
 
 ### Code Style
@@ -604,41 +595,41 @@ Contributions are welcome! Please follow these guidelines:
 - Include comments for complex algorithms
 - Test your changes before submitting
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+##  Author
 
 **Sourav**
 - GitHub: [@Sourav0607](https://github.com/Sourav0607)
 - Repository: [Stereo_Vision_ROS2](https://github.com/Sourav0607/Stereo_Vision_ROS2)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - OpenCV community for excellent computer vision libraries
 - Open3D developers for 3D visualization tools
 - ROS2 community for robotics middleware
 - Stereo vision research community
 
-## 📊 Project Status
+##  Project Status
 
-**Status**: ✅ Active Development
+**Status**:  Active Development
 
 **Completed Features**:
-- ✅ Stereo camera calibration (manual and auto-capture modes)
-- ✅ Real-time depth map generation with SGBM
-- ✅ WLS (Weighted Least Squares) filtering for disparity refinement
-- ✅ Achieved 75% depth map coverage
-- ✅ 3D point cloud visualization with Open3D
-- ✅ Interactive mouse-click depth measurement
-- ✅ ROS2 camera image publisher node
-- ✅ ROS2 stereo point cloud publisher node with PointCloud2 messages
-- ✅ RViz visualization support
-- ✅ Comprehensive code comments
+-  Stereo camera calibration (manual and auto-capture modes)
+-  Real-time depth map generation with SGBM
+-  WLS (Weighted Least Squares) filtering for disparity refinement
+-  Achieved 75% depth map coverage
+-  3D point cloud visualization with Open3D
+-  Interactive mouse-click depth measurement
+-  ROS2 camera image publisher node
+-  ROS2 stereo point cloud publisher node with PointCloud2 messages
+-  RViz visualization support
+-  Comprehensive code comments
 
 **Future Work** (Not Yet Completed):
-- [ ] 🔧 **Improve depth estimation accuracy** (ongoing priority)
+- [ ]  **Improve depth estimation accuracy** (ongoing priority)
   - Fine-tune calibration process
   - Implement depth-disparity validation
   - Add ground truth measurements for calibration
@@ -646,6 +637,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Happy Stereo Vision! 📷📷 → 🌍**
+**Happy Stereo Vision!**
 
 For questions or issues, please write me to sourav.hawaldar@gmail.com
