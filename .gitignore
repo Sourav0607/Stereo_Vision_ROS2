@@ -2,3 +2,6 @@ cam_ros_node/build/
 cam_ros_node/install/
 cam_ros_node/log/
 cam_ros_node/images/
+
+# Camera setup images
+images/
