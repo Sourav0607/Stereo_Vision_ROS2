@@ -184,29 +184,20 @@ python3 stereo_vision/verify_usbport_cameraR.py
 
 ### Step 2: Perform Stereo Calibration
 
-#### Option A: Manual Capture Mode
+#### Option A: Auto Capture Mode (After every 3 seconds)
 
 ```bash
 cd stereo_vision
-python3 stereo_calibrate.py
+python3 stereo_calibrate_auto capture.py
 ```
 
-**Instructions**:
-- Press **SPACE** to capture checkerboard images (capture 20-30 pairs)
-- Press **C** to start calibration
-- Press **ESC** to quit
 
-#### Option B: Auto-Capture Mode
+
+####  Calibration of Camera
 
 ```bash
-python3 stereo_calibration_auto_capture.py
+python3 stereo_calibration.py
 ```
-
-**Instructions**:
-- Move checkerboard to different positions and angles
-- System automatically captures when pattern is detected
-- Wait for 20-30 captures, then calibration runs automatically
-
 **Calibration Results**: Saved to `~/stereo_calib_results/`
 - `left.yaml` - Left camera intrinsics (K, D)
 - `right.yaml` - Right camera intrinsics (K, D)
@@ -221,7 +212,6 @@ python3 stereo_vision/point_cloud_3d.py
 **Controls**:
 - **Click on image**: Display 3D coordinates and depth at pixel
 - **SPACE**: Open Open3D viewer with colored point cloud
-- **S**: Save current point cloud as PLY file
 - **ESC**: Exit application
 
 **Mouse Controls in Open3D**:
@@ -229,18 +219,6 @@ python3 stereo_vision/point_cloud_3d.py
 - **Right drag**: Pan view
 - **Scroll**: Zoom in/out
 - **R**: Reset view
-
-### Step 4: Real-Time Depth Mapping
-
-```bash
-python3 stereo_vision/depth_from_live_cameras.py
-```
-
-**Features**:
-- Live disparity map with JET colormap (blue=far, red=close)
-- Coverage percentage indicator
-- Epipolar line overlay for rectification verification
-- Center region depth statistics
 
 ## 🎯 Stereo Calibration
 
