@@ -100,7 +100,7 @@ print(f"Rotation (R):\n{R}")  # rotation from left to right camera
 print(f"Translation (T):\n{T}")  # translation between cameras
 
 # === Stereo Rectification ===
-print("\n🔧 Computing rectification and projection matrices...")
+print("\n Computing rectification and projection matrices...")
 # this aligns both images so rows match for stereo matching
 R1, R2, P1, P2, Q, roi1, roi2 = cv2.stereoRectify(
     K_L, D_L, K_R, D_R, grayL.shape[::-1], R, T, alpha=0
