@@ -64,7 +64,7 @@ This project implements a complete stereo vision pipeline for real-time 3D recon
 -  Configurable camera parameters via ROS2 params
 -  ~30 FPS real-time performance
 
-## 🖥️ System Requirements
+## System Requirements
 
 ### Hardware
 - **Cameras**: 2x USB webcams (tested with 640x480 resolution)
