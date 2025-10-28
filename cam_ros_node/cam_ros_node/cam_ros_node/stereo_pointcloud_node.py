@@ -25,8 +25,7 @@ Visualization in RViz:
     Add PointCloud2 display subscribing to /stereo/points
 
 
-Author: Sourav Anil Hawaldar
-Date: 2025
+Author: Sourav Hawaldar
 """
 
 import os, cv2, yaml, numpy as np

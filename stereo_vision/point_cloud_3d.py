@@ -16,8 +16,7 @@ Requirements:
 - OpenCV with ximgproc (optional, for WLS filtering)
 - Open3D (optional, for 3D visualization)
 
-Author: Stereo Vision Project
-Date: 2025
+Author: Sourav Hawaldar
 """
 
 import os

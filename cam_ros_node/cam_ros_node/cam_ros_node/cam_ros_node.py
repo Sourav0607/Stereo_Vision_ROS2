@@ -18,8 +18,7 @@ Requirements:
 - cv_bridge (OpenCV <-> ROS message converter)
 - opencv-python (camera capture and image processing)
 
-Author: Stereo Vision Project
-Date: 2025
+Author: Sourav Hawaldar
 """
 
 import rclpy
