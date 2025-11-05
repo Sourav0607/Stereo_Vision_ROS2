@@ -2,3 +2,7 @@ cam_ros_node/build/
 cam_ros_node/install/
 cam_ros_node/log/
 cam_ros_node/images/
+
+
+object_tracking/sort.py
+object_tracking/__pycache__/
