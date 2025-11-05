@@ -647,6 +647,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 -  Interactive mouse-click depth measurement
 -  ROS2 camera image publisher node
 -  ROS2 stereo point cloud publisher node with PointCloud2 messages
+-  Object Tracking
 -  RViz visualization support
 -  Comprehensive code comments
 
@@ -655,7 +656,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   - Fine-tune calibration process
   - Implement depth-disparity validation
   - Add ground truth measurements for calibration
-- [ ] Implement YOLO object detection and human pose estimation
+- [ ] Implement human pose estimation
 
 ---
 
