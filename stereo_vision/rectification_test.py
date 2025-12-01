@@ -21,8 +21,8 @@ mapLx, mapLy = cv2.initUndistortRectifyMap(K_L, D_L, R1, P1, img_size, cv2.CV_32
 mapRx, mapRy = cv2.initUndistortRectifyMap(K_R, D_R, R2, P2, img_size, cv2.CV_32FC1)
 
 # open both camera streams
-capL = cv2.VideoCapture(0)
-capR = cv2.VideoCapture(2)
+capL = cv2.VideoCapture(2)
+capR = cv2.VideoCapture(4)
 
 while True:
     retL, imgL = capL.read()
